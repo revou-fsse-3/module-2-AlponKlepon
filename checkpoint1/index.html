@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Quadrat"
+      content="Unlock Boundless Knowledge with Quadrat: Explore Our Online Courses for Expert Learning and Personal Growth. Discover a World of Opportunities Today!"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Quadrat | Homepage</title>
+  </head>
+
+  <body>
+    <!-- Header Settings -->
+    <header>
+      <!-- Navbar Settings -->
+      <nav>
+        <div class="navLeftWrapper">
+          <div>
+            <p>Q<span>²</span>uadrat</p>
+          </div>
+
+          <div class="navMenuWrapper">
+            <div class="navDropdown pointer">
+              <a href="#">Jenjang</a>
+              <img src="assets/icon/caret.svg" alt="Dropdown" />
+              <ul>
+                <li>SD</li>
+                <li>SMP</li>
+                <li>SMA</li>
+              </ul>
+            </div>
+            <ul>
+              <li>Program</li>
+            </ul>
+            <ul>
+              <li>Kata Mereka</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="navRightWrapper">
+          <div class="navButton">
+            <button type="button">
+              <a href="#kelasGratis">Coba Kelas Gratis</a>
+            </button>
+          </div>
+          <div class="navDarkMode">
+            <img
+              src="assets/dark-mode/moon.png"
+              alt="moon_dark_mode"
+              id="iconChange"
+              onclick="darkMode()"
+            />
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Section 1 -->
+    <!-- Carousel Banner -->
+    <main>
+      <div class="contentContainer">
+        <div class="contentWrapper">
+          <p>
+            Bimbel online & tatap muka terbaik untuk SD, SMP, SMA, dan persiapan
+            masuk PTN
+          </p>
+          <form action="#">
+            <div class="userWa">
+              <label for="title"
+                >Input nomor Whatsapp dan mulai belajar sekarang!</label
+              >
+              <input
+                type="tel"
+                name="wa"
+                id="wa"
+                minlength="9"
+                maxlength="16"
+                pattern="[+][6][2][0-9]{9,16}"
+                value="+62"
+                required
+              />
+            </div>
+            <button>Kontak Sekarang !</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="bannerContainer">
+        <div class="banner">
+          <img src="assets/banner/new-user.png" alt="" />
+          <img src="assets/banner/heroes-day.png" alt="" />
+          <img src="assets/banner/birthday-promo.png" alt="" />
+        </div>
+      </div>
+    </main>
+
+    <!-- Section 2 (jangan lupa update untuk mobile view)-->
+    <div class="metodeContainer">
+      <div class="metodeWrapper">
+        <!-- Flex -->
+        <div class="metodeTitle">
+          <h1>
+            Pilih metode belajar di Quadrat yang sesuai dengan kebutuhan kamu
+          </h1>
+        </div>
+        <div class="metode">
+          <div class="metodeGrid">
+            <section>Quadrat Center</section>
+            <section>Kelas tatap muka terjadwal</section>
+            <section>Konsultasi tatap muka dan forum tanya jawab</section>
+            <section>K-13 dan K-13 Revisi</section>
+            <section>Fasilitas lengkap termasuk Tryout</section>
+
+            <section>Quadrat Online</section>
+            <section>Dapat konseling melalui chat dan video call</section>
+            <section>
+              Konsultasi melalui video call dan forum tanya jawab
+            </section>
+            <section>K-13 dan K-13 Revisi</section>
+            <section>Fasilitas lengkap termasuk Tryout</section>
+          </div>
+        </div>
+        <!-- Grid -->
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="memberContainer">
+      <div class="memberTitle">
+        <h1>Siapa saja yang telah bergabung ?</h1>
+      </div>
+      <div class="memberList">
+        <div class="memberListWrapper">
+          <!--Grid -->
+          <section>
+            <svg></svg>
+            <p></p>
+          </section>
+          <section>
+            <svg></svg>
+            <p></p>
+          </section>
+          <section>
+            <svg></svg>
+            <p></p>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="formKelasGratis">
+      <div class="formTitle">
+        <h1>Coba Kelas Gratis !</h1>
+      </div>
+      <form action="#" id="kelasGratis">
+        <div class="userInfo">
+          <div class="userInput">
+            <label for="fullname">Nama Lengkap</label>
+            <input type="text" />
+          </div>
+          <div class="userInput">
+            <label for="email">E-mail</label>
+            <input type="email" />
+          </div>
+          <div class="userInput">
+            <label for="phone">No. Telepon</label>
+            <input type="tel" />
+          </div>
+        </div>
+        <div class="userSchedule">
+          <label for="schedule">Pilih Jadwal Kelasmu</label>
+          <input type="date" name="" id="" />
+        </div>
+        <div class="userSelect">
+          <label for="criteria">Jenjang</label>
+          <select name="" id=""></select>
+          <label for="source">Sumber Refrensi</label>
+          <select name="" id=""></select>
+        </div>
+        <input type="submit" name="submitForm" id="" value="Coba Sekarang !" />
+      </form>
+    </div>
+
+    <footer></footer>
+    <script src="main.js"></script>
+  </body>
+</html>
