@@ -55,12 +55,21 @@
             />
           </div>
         </div>
+        <div class="hamburger" onclick="hamburger()">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+              d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+            />
+          </svg>
+        </div>
       </nav>
     </header>
 
     <!-- Section 1 -->
     <!-- Carousel Banner -->
-    <main>
+
+    <main class="hidden">
       <div class="contentContainer">
         <div class="contentWrapper">
           <p>
@@ -69,7 +78,7 @@
           </p>
           <form action="#">
             <div class="userWa">
-              <label for="title"
+              <label for="title" class="label"
                 >Input nomor Whatsapp dan mulai belajar sekarang!</label
               >
               <input
@@ -80,10 +89,11 @@
                 maxlength="16"
                 pattern="[+][6][2][0-9]{9,16}"
                 value="+62"
+                placeholder="+62881234567"
                 required
               />
+              <input type="submit" value="Kontak Sekarang !" class="submit" />
             </div>
-            <button>Kontak Sekarang !</button>
           </form>
         </div>
       </div>
@@ -98,91 +108,238 @@
     </main>
 
     <!-- Section 2 (jangan lupa update untuk mobile view)-->
-    <div class="metodeContainer">
-      <div class="metodeWrapper">
-        <!-- Flex -->
-        <div class="metodeTitle">
-          <h1>
-            Pilih metode belajar di Quadrat yang sesuai dengan kebutuhan kamu
-          </h1>
-        </div>
-        <div class="metode">
-          <div class="metodeGrid">
-            <section>Quadrat Center</section>
-            <section>Kelas tatap muka terjadwal</section>
-            <section>Konsultasi tatap muka dan forum tanya jawab</section>
-            <section>K-13 dan K-13 Revisi</section>
-            <section>Fasilitas lengkap termasuk Tryout</section>
-
-            <section>Quadrat Online</section>
-            <section>Dapat konseling melalui chat dan video call</section>
-            <section>
-              Konsultasi melalui video call dan forum tanya jawab
-            </section>
-            <section>K-13 dan K-13 Revisi</section>
-            <section>Fasilitas lengkap termasuk Tryout</section>
-          </div>
-        </div>
-        <!-- Grid -->
+    <div class="metodeContainer hidden">
+      <!-- Flex -->
+      <div class="metodeTitle">
+        <h1>
+          Pilih metode belajar di
+          <span style="color: tomato; font-family: Destine">Quadrat</span> yang
+          sesuai dengan kebutuhan kamu
+        </h1>
       </div>
+      <div class="metodeGrid">
+        <!-- <div class="features">
+          <section>
+            <h4>Features</h4>
+          </section>
+          <section>
+            <img src="assets/icon/kelas-interaktif.png" alt="" />
+            <p>Kelas Interaktif</p>
+          </section>
+          <section>
+            <img src="assets/icon/konsultasi-pr.png" alt="" />
+            <p>Konsultasi PR</p>
+          </section>
+          <section>
+            <img
+              src="assets/icon/120b04b7-455e-40b7-8370-b968de09d2c0.png"
+              alt=""
+            />
+            <p>Kurikulum</p>
+          </section>
+          <section>
+            <img src="assets/icon/fasilitas-tambahan.png" alt="" />
+            <p>Fasilitas</p>
+          </section>
+        </div> -->
+        <div class="quadratCenter">
+          <h4 class="titleCenter">Quadrat Center</h4>
+          <p>Kelas tatap muka terjadwal</p>
+          <p>Konsultasi tatap muka dan forum tanya jawab</p>
+          <p>K-13 dan K-13 Revisi</p>
+          <p>Fasilitas lengkap termasuk Tryout</p>
+        </div>
+        <div class="quadratOnline">
+          <h4 class="titleOnline">Quadrat Online</h4>
+          <p>Dapat konseling melalui chat dan video call</p>
+          <p>Konsultasi melalui video call dan forum tanya jawab</p>
+          <p>K-13 dan K-13 Revisi</p>
+          <p>Fasilitas lengkap termasuk Tryout</p>
+        </div>
+      </div>
+      <!-- Grid -->
     </div>
 
     <!-- Section 3 -->
-    <div class="memberContainer">
+    <div class="memberContainer hidden">
       <div class="memberTitle">
-        <h1>Siapa saja yang telah bergabung ?</h1>
+        <h1>Siapa saja yang telah bergabung di <span>Quadrat</span> ?</h1>
       </div>
-      <div class="memberList">
-        <div class="memberListWrapper">
-          <!--Grid -->
-          <section>
-            <svg></svg>
-            <p></p>
-          </section>
-          <section>
-            <svg></svg>
-            <p></p>
-          </section>
-          <section>
-            <svg></svg>
-            <p></p>
-          </section>
-        </div>
+
+      <div class="memberListWrapper">
+        <!--Grid -->
+        <section>
+          <svg
+            fill="#000000"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 496 496"
+            xml:space="preserve"
+          >
+            <g>
+              <g>
+                <g>
+                  <path
+                    d="M414.56,319.478L352,305.574v-19.768c24.176-17.448,40-45.784,40-77.816v-48h8V94.614c0-3.16-0.304-6.328-0.8-9.496
+      L432,74.87v22.592c-9.288,3.312-16,12.112-16,22.528v24h48v-24c0-10.416-6.712-19.216-16-22.528V55.99
+      c0-8.312-5.328-15.552-13.248-18.016L329.656,5.134c-21.816-6.832-45.504-6.832-67.312,0L157.248,37.966
+      C149.328,40.438,144,47.678,144,55.99s5.328,15.552,13.248,18.016L192.8,85.118c-0.496,3.168-0.8,6.336-0.8,9.496v65.376h8v48
+      c0,32.032,15.824,60.368,40,77.816v19.768l-62.56,13.896c-0.464,0.104-0.968,0.256-1.44,0.376V183.99H0v224h42.8
+      c2.64,7.432,7.048,14.008,12.728,19.248l-8.592,68.752h18.36L88,488.422l22.704,7.568H120h9.064H496v-74.992
+      C496,371.87,462.512,330.134,414.56,319.478z M440,111.99c4.416,0,8,3.584,8,8v8h-16v-8C432,115.574,435.584,111.99,440,111.99z
+       M162.016,58.734c-1.2-0.376-2.016-1.48-2.016-2.744s0.816-2.368,2.016-2.752l105.096-32.84c9.368-2.92,19.08-4.408,28.888-4.408
+      c9.808,0,19.52,1.488,28.888,4.408l105.096,32.848c1.2,0.376,2.016,1.48,2.016,2.744s-0.816,2.368-2.016,2.752l-105.096,32.84
+      c-18.736,5.84-39.048,5.84-57.784,0L162.016,58.734z M208,94.614c0-1.544,0.168-3.096,0.336-4.648l54.008,16.88
+      c10.904,3.416,22.224,5.144,33.656,5.144s22.752-1.728,33.656-5.144l54.016-16.872c0.16,1.552,0.328,3.104,0.328,4.64v49.376h-8
+      H216h-8V94.614z M216,207.99v-48h160v48c0,44.112-35.888,80-80,80S216,252.102,216,207.99z M296,319.046l-40-20v-3.896
+      c12.192,5.616,25.712,8.84,40,8.84c14.288,0,27.808-3.224,40-8.84v3.896L296,319.046z M330.768,319.558l-13.096,24l-9.52-12.696
+      L330.768,319.558z M283.856,330.854l-9.52,12.696l-13.096-24L283.856,330.854z M40,391.99H16v-192h144v192h-24
+      c0-26.472-21.528-48-48-48S40,365.518,40,391.99z M88,471.558l-22.832,7.608l5.312-42.536c5.44,2.144,11.336,3.36,17.52,3.36
+      s12.08-1.216,17.52-3.36l5.32,42.536L88,471.558z M88,423.99c-17.648,0-32-14.352-32-32s14.352-32,32-32s32,14.352,32,32
+      S105.648,423.99,88,423.99z M216,479.99h-24v-32h-16v32h-48.936l-6.592-52.752c5.688-5.24,10.096-11.816,12.728-19.248H176
+      v-63.296l40,73.336V479.99z M288,479.99h-56v-66.04l-43.888-80.456l55.744-12.392L288,402.03V479.99z M282.744,358.99
+      L296,341.318l13.256,17.672L296,383.286L282.744,358.99z M360,479.99h-56v-77.96l44.144-80.92l55.744,12.384L360,413.95V479.99z
+       M480,479.99h-64v-32h-16v32h-24v-61.96l43.888-80.456c35.8,11.848,60.112,44.944,60.112,83.424V479.99z"
+                  />
+                  <rect x="96" y="215.99" width="48" height="16" />
+                  <rect x="32" y="247.99" width="112" height="16" />
+                  <rect x="32" y="279.99" width="112" height="16" />
+                  <rect x="32" y="311.99" width="64" height="16" />
+                </g>
+              </g>
+            </g>
+          </svg>
+          <h2>10.000+</h2>
+          <p>Siswa Terdaftar</p>
+        </section>
+        <section>
+          <svg
+            fill="#000000"
+            width="800px"
+            height="800px"
+            viewBox="0 0 1920 1920"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M640.376 790.588c38.852 0 55.68 15.586 83.577 41.337 32.866 30.155 77.816 71.604 161.506 71.604 60.31 0 100.066-22.023 129.882-45.628-5.873 150.55-129.205 271.51-281.223 271.51-139.483 0-255.022-101.985-277.61-235.143 45.403-13.666 75.67-40.433 98.937-62.004 28.235-25.977 45.29-41.676 84.931-41.676ZM1920-.012V1129.4h-338.824v-112.94h225.883V112.93H112.94v903.53h112.941v112.94H0V-.01h1920ZM734.118 451.766c148.404 0 269.138 115.539 280.207 261.233-17.393 11.633-32.753 24.17-45.967 36.367-27.784 25.75-44.386 41.223-82.9 41.223-39.642 0-56.696-15.699-84.93-41.675-32.528-30.042-77.253-71.266-160.152-71.266-83.689 0-128.64 41.45-161.505 71.605-9.94 9.148-18.523 16.49-27.106 22.814v-37.948c0-155.633 126.607-282.353 282.353-282.353Zm737.731 262.475-310.136 826.955c-217.412 22.589-482.598 24.621-638.57-32.3l-38.851 106.164c232.659 84.932 614.852 48.339 747.332 39.755l7.115 2.71 1.242-3.275c.678 0 1.92-.113 2.71-.113l-31.849 87.078c-4.404 12.31-14.57 21.12-27.67 24.057-117.46 26.993-277.045 41.788-449.054 41.788-171.784 0-346.617-32.64-508.236-94.645V1459.2c0-75.67 50.598-142.758 123.22-163.426 123.896-35.35 251.406-53.76 382.192-53.647.904 0 1.807.226 2.824.226.564 0 1.016-.113 1.58-.113 126.27.452 255.474 17.958 387.502 54.664l37.045-106.617-14.683-4.63c-53.534-14.796-107.746-25.638-161.844-34.673 88.094-72.509 145.694-181.045 145.694-303.925V734.118c0-217.977-177.318-395.294-395.294-395.294-217.977 0-395.294 177.317-395.294 395.294v112.94c0 122.655 57.374 231.078 145.355 303.7-56.019 9.26-111.586 20.894-166.024 36.367-120.847 34.334-205.214 146.259-205.214 272.075v328.998l34.899 14.57C332.386 1879.453 535.228 1920 734.118 1920c180.367 0 348.762-15.812 474.24-44.612 50.371-11.633 90.917-47.096 108.536-95.322l31.85-87.078c14.343-39.303 7.567-82.22-18.41-114.748-12.988-16.376-29.59-28.687-48.226-36.254l295.454-787.99-105.713-39.756Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <h2>2.000+</h2>
+          <p>Guru Bergabung</p>
+        </section>
+        <section>
+          <svg
+            fill="#000000"
+            height="800px"
+            width="800px"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 512.001 512.001"
+            xml:space="preserve"
+          >
+            <g>
+              <g>
+                <path
+                  d="M508.788,174.522c-3.286-5.89-8.671-10.149-15.16-11.991l-56.983-16.167c-4.474-1.267-9.127,1.328-10.397,5.801
+    c-1.268,4.473,1.328,9.127,5.801,10.397l56.983,16.167c4.466,1.267,7.068,5.931,5.8,10.396l-68.876,242.749
+    c-0.614,2.164-2.034,3.958-3.997,5.053s-4.235,1.359-6.312,0.772l-67.876-20.056h34.388c13.926,0,25.254-11.328,25.254-25.254
+    V82.413c0-13.926-11.328-25.254-25.254-25.254H129.831c-13.926,0-25.254,11.328-25.254,25.254v309.978
+    c0,13.926,11.328,25.254,25.254,25.254h37.195l-70.595,20.03c-2.163,0.614-4.436,0.35-6.4-0.747
+    c-1.963-1.095-3.383-2.89-3.997-5.053l-68.876-242.75c-1.267-4.466,1.335-9.128,5.801-10.396l58.857-16.699
+    c4.473-1.269,7.069-5.924,5.801-10.397c-1.269-4.473-5.925-7.068-10.396-5.801l-58.858,16.699
+    C4.967,166.333-2.839,180.324,0.962,193.72L69.836,436.47c1.842,6.49,6.1,11.874,11.991,15.16
+    c3.814,2.128,8.017,3.212,12.268,3.212c2.314,0,4.643-0.322,6.931-0.971l127.681-36.226h59.654l122.606,36.226
+    c2.289,0.65,4.616,0.971,6.931,0.971c4.25,0,8.454-1.084,12.267-3.212c5.891-3.286,10.149-8.67,11.991-15.16L511.03,193.72
+    C512.872,187.231,512.076,180.413,508.788,174.522z M289.423,400.809H129.831c-4.642,0-8.418-3.777-8.418-8.418V82.413
+    c0-4.642,3.776-8.418,8.418-8.418h252.331c4.641,0,8.418,3.776,8.418,8.418v309.978c0,4.642-3.777,8.418-8.418,8.418h-92.643
+    C289.487,400.809,289.455,400.809,289.423,400.809z"
+                />
+              </g>
+            </g>
+          </svg>
+          <h2>50.000+</h2>
+          <p>Soal untuk Persiapan Ujian</p>
+        </section>
       </div>
     </div>
 
     <!-- Section 4 -->
-    <div class="formKelasGratis">
-      <div class="formTitle">
-        <h1>Coba Kelas Gratis !</h1>
+    <div class="formKelasGratis hidden">
+      <div class="formContent">
+        <div class="secTitle">
+          <picture>
+            <source
+              media="(min-width:1000px)"
+              srcset="/assets/img/building.png"
+            />
+            <img src="assets/img/study.png" alt="formLogo" />
+          </picture>
+          <div class="formTitle">
+            <h1>Coba Kelas Gratis di <span>Quadrat</span> !</h1>
+          </div>
+        </div>
+        <form action="#" id="kelasGratis">
+          <div class="cardGrid">
+            <div class="userInfo">
+              <div class="userInput">
+                <label for="fullname">Nama Lengkap</label>
+                <input type="text" placeholder="Masukan Nama Anda" required />
+              </div>
+              <div class="userInput">
+                <label for="email">E-mail</label>
+                <input type="email" placeholder="example@gmail.com" required />
+              </div>
+              <div class="userInput">
+                <label for="phone">No. Telepon</label>
+                <input
+                  type="text"
+                  minlength="9"
+                  maxlength="16"
+                  pattern="[+][6][2][0-9]{9,16}"
+                  placeholder="+628981234753"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="userSchedule">
+              <label for="schedule">Pilih Jadwal Kelasmu</label>
+              <input type="date" name="" id="" required />
+            </div>
+
+            <div class="userSelect">
+              <label for="source">Sesuaikan Jenjang Pendidikanmu</label>
+              <select name="" id="" required>
+                <option value="">SD</option>
+                <option value="">SMP</option>
+                <option value="">SMA/SMK</option>
+              </select>
+              <label for="source">Sumber Referensi</label>
+              <select name="" id="" required>
+                <option value="">Facebook</option>
+                <option value="">Google</option>
+                <option value="">Instagram</option>
+                <option value="">Tiktok</option>
+                <option value="">Teman/Relasi</option>
+              </select>
+            </div>
+
+            <div class="userSubmit">
+              <input
+                type="submit"
+                name="submitForm"
+                id=""
+                value="Coba Sekarang !"
+              />
+            </div>
+          </div>
+        </form>
       </div>
-      <form action="#" id="kelasGratis">
-        <div class="userInfo">
-          <div class="userInput">
-            <label for="fullname">Nama Lengkap</label>
-            <input type="text" />
-          </div>
-          <div class="userInput">
-            <label for="email">E-mail</label>
-            <input type="email" />
-          </div>
-          <div class="userInput">
-            <label for="phone">No. Telepon</label>
-            <input type="tel" />
-          </div>
-        </div>
-        <div class="userSchedule">
-          <label for="schedule">Pilih Jadwal Kelasmu</label>
-          <input type="date" name="" id="" />
-        </div>
-        <div class="userSelect">
-          <label for="criteria">Jenjang</label>
-          <select name="" id=""></select>
-          <label for="source">Sumber Refrensi</label>
-          <select name="" id=""></select>
-        </div>
-        <input type="submit" name="submitForm" id="" value="Coba Sekarang !" />
-      </form>
     </div>
 
     <footer></footer>

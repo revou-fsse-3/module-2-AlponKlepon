@@ -34,6 +34,7 @@
   --primary-color: white;
   --secondary-color: black;
 }
+
 /* Reset */
 * {
   margin: 0;
@@ -41,9 +42,19 @@
 }
 
 body {
+  font-family: "Roboto", sans-serif;
+  color: var(--primary-color);
   background-color: var(--background-color);
+  transition: ease-in-out 0.7s;
 }
+
 /* Header Setup */
+header {
+  background-color: var(--background-color);
+  border-bottom: 1px solid black;
+  width: 100%;
+  transition: ease-in-out 0.7s;
+}
 header p {
   font-family: "Destine", sans-serif;
   font-size: 40px;
@@ -62,10 +73,9 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 18px;
   font-weight: bold;
   padding: 10px 30px;
-  border: 1px solid black;
+  height: 60px;
 }
 nav ul li {
   list-style: none;
@@ -78,6 +88,8 @@ main {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-flow: row wrap;
+  flex-basis: content;
   height: 100vh;
   max-width: 100%;
 }
@@ -85,10 +97,11 @@ main {
 /* Navbar Setup */
 .navMenuWrapper {
   display: flex;
-  justify-content: space-between;
+  gap: 1rem;
+  font-size: clamp(18px, 2.2vw, 20px);
   color: var(--primary-color);
   margin-left: calc(3vw - 10px);
-  width: 280px;
+  width: 350px;
 }
 .navMenuWrapper li {
   cursor: pointer;
@@ -107,20 +120,27 @@ main {
 .navDropdown ul {
   display: none;
   position: absolute;
+  transform: translate(-15px, 10px);
   box-shadow: 2px 2px 5px 1px var(--primary-color);
   color: var(--primary-color);
 }
 .navDropdown ul li {
+  font-size: 16px;
   color: var(--primary-color);
-  padding: 5px 0px;
+  padding: 15px 10px;
+  transition: 0.3s;
   cursor: pointer;
 }
 .navDropdown:hover ul {
   display: block;
-  padding: 0px 10px;
-  width: 100px;
+  padding: 10px 10px;
   background-color: var(--background-color);
   margin: 20px 0px;
+  width: 200px;
+}
+.navDropdown ul li:hover {
+  color: #2b3139;
+  background-color: beige;
 }
 .navLeftWrapper {
   display: flex;
@@ -136,10 +156,16 @@ main {
 .navButton button {
   background-color: tomato;
   color: whitesmoke;
+  font-size: clamp(12px, 2vw, 16px);
   border: none;
   border-radius: 50px;
   padding: 10px 15px;
+  width: clamp(100px, 20vw, 200px);
+  height: clamp(25px, 8vw, 50px);
   cursor: pointer;
+}
+.navButton button a {
+  color: whitesmoke;
 }
 .navDarkMode img {
   width: 25px;
@@ -148,22 +174,43 @@ main {
 
 /* Section 1 Setup */
 .contentContainer {
+  margin-top: -68px;
+  width: clamp(450px, 45vw, 650px);
+}
+.contentWrapper {
   display: flex;
   flex-flow: column;
   justify-content: space-evenly;
-  margin-top: -68px;
-  width: fit-content;
-}
-.contentWrapper {
-  padding: 50px;
-  border: 1px solid black;
   font-size: clamp(16px, 10vw, 22px);
-
-  height: 150px;
+  color: black;
+  padding: 30px;
+  border-radius: 20px;
+  background-image: url(/assets/img/study-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 350px;
+}
+.contentWrapper p {
+  font-size: clamp(18px, 10vw, 26px);
+  font-weight: 600;
 }
 .userWa {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
+  gap: 0.5rem;
+  margin: 20px 0;
+}
+.userWa input {
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+.submit {
+  align-self: center;
+  background-color: tomato;
+  border-radius: 50px;
+  border: 0px;
+  padding: 20px;
+  margin-top: 25px;
 }
 
 /* Banner Setup */
@@ -172,32 +219,314 @@ main {
   justify-content: center;
   margin-top: -68px;
   border: 10px solid black;
-  width: clamp(250px, 50vw, 490px);
+  width: 490px;
+  max-height: clamp(140px, 50vw, 275px);
 }
 .banner {
   display: flex;
-  width: clamp(250px, 50vw, 490px);
+  width: 490px;
   max-width: 490px;
   overflow: hidden;
 }
 .banner img {
-  width: clamp(250px, 50vw, 490px);
+  width: 490px;
   max-height: 280px;
   animation: carousel 12s infinite;
 }
 
 /* Metode Setup */
-.metodeContainer {
-  display: block;
+
+/* .metodeContainer {
   height: calc(100vh - 65px);
+} */
+.metodeTitle {
+  text-align: center;
+}
+.metodeContainer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 5rem;
+  /* justify-content: space-between; */
+  height: 100vh;
+}
+.metodeGrid {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  color: black;
+  width: 900px;
+  height: 350px;
+}
+.titleCenter {
+  text-align: center;
+  color: whitesmoke;
+  padding: 20px;
+  border-radius: 20px 20px 0px 0px;
+  background: linear-gradient(303.94deg, #53bbd4 -33.92%, #5c49d8 124.28%);
+}
+.titleOnline {
+  text-align: center;
+  color: whitesmoke;
+  padding: 20px;
+  border-radius: 20px 20px 0px 0px;
+  background: linear-gradient(262.86deg, #ff6766 14.15%, #f89420 100%);
+}
+/* .metodeGrid div section h4 {
+  text-align: center;
+  padding: 20px;
+  background-color: aquamarine;
+}
+.metodeGrid div section {
+  align-content: center;
+} */
+/* .features {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(5, 1fr);
+  row-gap: 10px;
+}
+.features section {
+  display: flex;
+  align-items: center;
+}
+.features section img {
+  padding: 10px;
+  width: 30px;
+} */
+.quadratCenter,
+.quadratOnline {
+  display: grid;
+  row-gap: 10px;
+  align-items: center;
+  background-color: white;
+  padding: 0px 30px;
+  padding-bottom: 10px;
+  border-radius: 50px;
+  width: 375px;
+}
+.quadratCenter p {
+  vertical-align: middle;
 }
 
 /* Member Setup */
+
+.memberTitle {
+  text-align: center;
+}
 .memberContainer {
-  height: calc(100vh - 70px);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 4rem;
+  height: 100vh;
+}
+.memberContainer span {
+  font-family: "Destine";
+  color: tomato;
+  font-weight: bold;
+}
+.memberListWrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  max-width: 1020px;
+}
+.memberListWrapper section {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  height: 250px;
+}
+.memberListWrapper section svg {
+  fill: var(--primary-color);
+  height: 150px;
+  width: 150px;
+}
+.memberListWrapper h2 {
+  color: tomato;
+}
+.memberListWrapper p {
+  font-size: 22px;
 }
 
 /* Form Setup */
+
 .formKelasGratis {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 5rem;
   height: 100vh;
+}
+.formTitle {
+  align-self: center;
+  text-align: center;
+  width: 100%;
+}
+.formTitle span {
+  font-family: "Destine";
+  font-weight: bold;
+  color: tomato;
+}
+.secTitle {
+  display: flex;
+  border-bottom: 0.5rem solid tomato;
+}
+.formContent {
+  width: 100%;
+  max-width: 700px;
+  border: 0.5rem solid tomato;
+  background-color: tomato;
+}
+.formContent > div {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.cardGrid {
+  display: grid;
+  grid: "userInfo userSchedule" "userInfo userSelect" "userInfo userSelect" "userInfo userSelect" "userInfo userSelect" "button button";
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.1rem;
+  background-color: tomato;
+}
+.cardGrid > div {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.userInfo {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  grid-area: userInfo;
+  padding: 20px 0px;
+  height: 300px;
+}
+.userInput {
+  display: flex;
+  flex-flow: row wrap;
+  padding-bottom: 15px;
+  margin: 0px 10px;
+  width: 100%;
+}
+.userInput label {
+  width: 95%;
+  margin: 5px 0px;
+}
+.userInput input {
+  width: 90%;
+  height: 40px;
+  font-size: 14px;
+  border: 1px solid var(--primary-color);
+  padding: 0px 5px;
+  outline: none;
+}
+.userSchedule {
+  display: flex;
+  flex-flow: column;
+  grid-area: userSchedule;
+  padding-top: 20px;
+}
+.userSchedule label {
+  margin: 0px 10px;
+  width: 95%;
+}
+.userSchedule input {
+  margin: 10px 10px;
+  max-width: 120px;
+  height: 40px;
+}
+.userSelect {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  grid-area: userSelect;
+  padding: 10px 0px;
+}
+.userSelect label {
+  align-self: center;
+  margin: 0px 10px;
+  width: 95%;
+}
+.userSelect select {
+  height: 30px;
+  width: 125px;
+  margin: 5px 10px;
+}
+.userSubmit {
+  display: flex;
+  justify-content: center;
+  grid-area: button;
+  padding: 10px;
+}
+.userSubmit input {
+  padding: 20px;
+  background: whitesmoke;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* OnScroll Animation. */
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 3s;
+}
+.animation {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+.hamburger {
+  display: none;
+  width: 30px;
+}
+
+/* Responsive Setup */
+@media (max-width: 980px) {
+  main {
+    flex-flow: column wrap;
+  }
+  .contentContainer {
+    flex-basis: content;
+    width: clamp(500px, 90vw, 750px);
+  }
+  .contentWrapper {
+    font-size: 18px;
+    align-items: flex-start;
+  }
+  .contentWrapper p {
+    font-size: 20px;
+  }
+  .contentWrapper form {
+    width: 100%;
+  }
+  .userWa {
+    flex-flow: row wrap;
+    margin: 10px 0;
+  }
+  .userWa label {
+    width: 95%;
+  }
+  .submit {
+    background-color: tomato;
+    color: whitesmoke;
+  }
+  .bannerContainer {
+    flex-basis: content;
+  }
+}
+
+@media (max-width: 900px) {
+  .metodeGrid {
+    flex-flow: column;
+    align-items: center;
+    max-width: 500px;
+    gap: 1rem;
+  }
 }
