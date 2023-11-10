@@ -1,5 +1,8 @@
-# Automate your website using Github Action
+# Automate changes of your website using Github Action
 
-## coba
+## Register on Netlify
 
-### coba PR
+## Buy Domain for your website
+
+## Using Github Action
+
